@@ -13,7 +13,7 @@ You'll need the following python packages: pysam, pyDNase, scikit-learn (for per
 
 ### Usage
 
-The script `run_all.sh` will in principle run all of these steps for you. 
+The script `run_all.sh` will in principle run all of these steps for you. Realistically you'll want to train each TF model (and probably do the DNase pre-processing) on a cluster since this is pretty time consuming (10ish hours). 
 
 1. Set a data location, e.g. add something like the following to your ~/.bash_profile
 ```

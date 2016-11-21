@@ -11,7 +11,7 @@ from itertools import izip
 import timeit
 import os
 
-import factor_net
+import tf_net
 
 import utils
 
