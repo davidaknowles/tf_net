@@ -1,15 +1,15 @@
 ## A custom CNN for the DREAM ENCODE challenge
 
 This is a pretty standard convolutional neural net on genomic sequence with the following features added:
-* normalized per-base DNaseII cuts for the + and - strand are concatenated onto the one hot encoding of sequence, to give a [sequence context] x 6 input matrix
-* gene expression PCs are included as features to allow the model to interpolate between different cell types
+* normalized per-base DNase I cuts for the + and - strand are concatenated onto the one hot encoding of sequence, to give a [sequence context] x 6 input matrix.
+* gene expression PCs are included as features to allow the model to interpolate between different cell types.
 * a three class ordinal likelihood is used for the Unbound/Ambiguous/Bound labels.
 * simultaneous analysis of the forward and reverse complement.
-* down-sampling of the negative set to speed up training. 
+* down-sampling of the negative set to speed up training (and accounting for by weighting the likelihood). 
 
 ### Installation
 
-You'll need the following python packages: pysam, pyDNase, scikit-learn, synapseclient (for downloading the data and submitting), numpy, scipy, theano. 
+You'll need the following python packages: pysam, pyDNase, scikit-learn (for performance metrics), synapseclient (for downloading the data and submitting), numpy, scipy, theano. 
 
 ### Usage
 
@@ -24,7 +24,7 @@ export DREAM_ENCODE_DATADIR=/myscratchspace/dream_encode/
 
 3. [optional] Calculate gene expression PCs using `gene_expression_pca.R`. I included the output file, 'ge_pca.txt' so you don't strictly need to rerun this. If you do want to do this yourself you'll need the R packages irlba and foreach.
 
-4. Calculate DNaseII cut counts using the `get_DNase_cuts.py` script. This converts the DNaseII bams into an efficient numpy representation of cut counts saved in .npz files. The bam first need indexing (e.g. using samtools). `index.sh` will do this for you. 
+4. Calculate DNase I cut counts using the `get_DNase_cuts.py` script. This converts the DNase I bams into an efficient numpy representation of cut counts saved in .npz files. The bam first need indexing (e.g. using samtools). `index.sh` will do this for you. 
 
 5. Train models for each TF using `train.py`. This script includes outputting leaderboard and final submissions.
 
