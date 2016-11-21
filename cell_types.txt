@@ -1,0 +1,13 @@
+Panc1
+HepG2
+H1-hESC
+PC-3
+K562
+induced_pluripotent_stem_cell
+MCF-7
+liver
+IMR-90
+HCT116
+GM12878
+HeLa-S3
+A549

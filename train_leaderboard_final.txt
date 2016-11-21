@@ -1,0 +1,32 @@
+[ARID3A](http:/www.factorbook.org/human/chipseq/tf/ARID3A)|HepG2|K562|
+[ATF2](http:/www.factorbook.org/human/chipseq/tf/ATF2)|GM12878, H1-hESC, MCF-7|**K562**|**HepG2**
+[ATF3](http:/www.factorbook.org/human/chipseq/tf/ATF3)|HCT116, H1-hESC, HepG2, K562|liver|
+[ATF7](http://www.uniprot.org/uniprot/P17544)|GM12878, HepG2, K562|**MCF-7**|
+[CEBPB](http:/www.factorbook.org/human/chipseq/tf/CEBPB)|A549, H1-hESC, HCT116, HeLa-S3, HepG2, IMR-90, K562|MCF-7|
+[CREB1](http:/www.factorbook.org/human/chipseq/tf/CREB1)|GM12878, H1-hESC, HepG2, K562|**MCF-7**|
+[CTCF](http:/www.factorbook.org/human/chipseq/tf/CTCF)|A549, H1-hESC, HeLa-S3, HepG2, IMR-90, K562, MCF-7|GM12878|**PC-3**, **induced_pluripotent_stem_cell**
+[E2F1](http:/www.factorbook.org/human/chipseq/tf/E2F1)|GM12878, HeLa-S3||**K562**
+[E2F6](http:/www.factorbook.org/human/chipseq/tf/E2F6)|A549, H1-hESC, HeLa-S3|K562|
+[EGR1](http:/www.factorbook.org/human/chipseq/tf/EGR1)|GM12878, H1-hESC, HCT116, MCF-7|K562|**liver**
+[EP300](http:/www.factorbook.org/human/chipseq/tf/EP300)|GM12878, H1-hESC, HeLa-S3, HepG2, K562, SK-N-SH|MCF-7|
+[FOXA1](http:/www.factorbook.org/human/chipseq/tf/FOXA1)|HepG2|**MCF-7**|**liver**
+[FOXA2](http:/www.factorbook.org/human/chipseq/tf/FOXA2)|HepG2||**liver**
+[GABPA](http:/www.factorbook.org/human/chipseq/tf/GABPA)|GM12878, H1-hESC, HeLa-S3, HepG2, MCF-7, SK-N-SH|K562|**liver**
+[GATA3](http:/www.factorbook.org/human/chipseq/tf/GATA3)|A549, SK-N-SH|MCF-7|
+[HNF4A](http:/www.factorbook.org/human/chipseq/tf/HNF4A)|HepG2||**liver**
+[JUND](http:/www.factorbook.org/human/chipseq/tf/JUND)|HCT116, HeLa-S3, HepG2, K562, MCF-7, SK-N-SH|H1-hESC|**liver**
+[MAFK](http:/www.factorbook.org/human/chipseq/tf/MAFK)|GM12878, H1-hESC, HeLa-S3, HepG2, IMR-90|K562, MCF-7|
+[MAX](http:/www.factorbook.org/human/chipseq/tf/MAX)|A549, GM12878, H1-hESC, HCT116, HeLa-S3, HepG2, K562, SK-N-SH|MCF-7|**liver**
+[MYC](http:/www.factorbook.org/human/chipseq/tf/MYC)|A549, HeLa-S3, K562, MCF-7|HepG2|
+[NANOG](http:/www.factorbook.org/human/chipseq/tf/NANOG)|H1-hESC||**induced_pluripotent_stem_cell**
+[REST](http:/www.factorbook.org/human/chipseq/tf/REST)|H1-hESC, HeLa-S3, HepG2, MCF-7, Panc1, SK-N-SH|K562|**liver**
+[RFX5](http:/www.factorbook.org/human/chipseq/tf/RFX5)|GM12878, HeLa-S3, MCF-7, SK-N-SH|HepG2|
+[SPI1](http:/www.factorbook.org/human/chipseq/tf/SPI1)|GM12878|K562|
+[SRF](http:/www.factorbook.org/human/chipseq/tf/SRF)|GM12878, H1-hESC, HCT116, HepG2, K562|MCF-7|
+[STAT3](http:/www.factorbook.org/human/chipseq/tf/STAT3)|HeLa-S3|GM12878|
+[TAF1](http:/www.factorbook.org/human/chipseq/tf/TAF1)|GM12878, H1-hESC, HeLa-S3, K562, SK-N-SH|HepG2|**liver**
+[TCF12](http:/www.factorbook.org/human/chipseq/tf/TCF12)|GM12878, H1-hESC, MCF-7, SK-N-SH|**K562**|
+[TCF7L2](http:/www.factorbook.org/human/chipseq/tf/TCF7L2)|HCT116, HeLa-S3, Panc1|MCF-7|
+[TEAD4](http:/www.factorbook.org/human/chipseq/tf/TEAD4)|A549, H1-hESC, HCT116, HepG2, K562, SK-N-SH|MCF-7|
+[YY1](http:/www.factorbook.org/human/chipseq/tf/YY1)|GM12878, H1-hESC, HCT116, HepG2, SK-N-SH|K562|
+[ZNF143](http:/www.factorbook.org/human/chipseq/tf/ZNF143)|GM12878, H1-hESC, HeLa-S3, HepG2|K562|
