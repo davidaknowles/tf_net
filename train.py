@@ -210,6 +210,9 @@ train_ct=cell_types
 #test_ct=cell_types[-1]
 test_ct=[]
 
+fits_dir=DATADIR+"fits/"
+if not os.path.isdir(fits_dir): os.mkdir(fits_dir)
+
 for epoch in range(20):
     print("Training")
     np.random.seed(epoch)
@@ -225,7 +228,7 @@ for epoch in range(20):
     # Save model and predictions to file
     for k,v in params.iteritems():
         d[k]=v.get_value() 
-    np.savez(DATADIR+"fits/%s.npz" % tf, **d)
+    np.savez(fits_dir+("%s.npz" % tf), **d)
 
     print("Epoch %d: train %s test %s" % (epoch+1, np.array_str(train_metrics, precision=2), np.array_str(test_metrics, precision=2) ) ) 
 
@@ -235,10 +238,13 @@ print("Model trained! Now testing...")
 
 test_pairs=[ ("F",cell_type) for cell_type in train_test[tf]["final"] ] + [ ("L",cell_type) for cell_type in train_test[tf]["leaderboard"] ]
 
+submissions_dir=DATADIR+"submissions/"
+if not os.path.isdir(submissions_dir): os.mkdir(submissions_dir)
+
 for (submission_type,cell_type) in test_pairs:
     print(submission_type + ":" + cell_type)
     dgf_lookup=read_cuts.read_both_strands_corrected(cell_type)
-    outfile=gzip.open(DATADIR+"submissions/%s.%s.%s.tab.gz" % (submission_type, tf,cell_type), "wb")
+    outfile=gzip.open(submissions_dir+("%s.%s.%s.tab.gz" % (submission_type, tf,cell_type)), "wb")
     neglikes=[]
     seq=[]
     lines=[]
