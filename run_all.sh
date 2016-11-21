@@ -11,6 +11,9 @@ python2.7 download_challenge_data.py
 echo "Calculating gene expression PCs"
 Rscript gene_expression_pca.R
 
+echo "Indexing DNase BAMs"
+./index.sh
+
 echo "Converting DNase BAMs to read cuts"
 for SLURM_ARRAY_TASK_ID in {0..13}; do
     export SLURM_ARRAY_TASK_ID

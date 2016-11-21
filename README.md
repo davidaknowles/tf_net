@@ -13,6 +13,8 @@ You'll need the following python packages: pysam, pyDNase, scikit-learn, synapse
 
 ### Usage
 
+The script `run_all.sh` will in principle run all of these steps for you. 
+
 1. Set a data location, e.g. add something like the following to your ~/.bash_profile
 ```
 export DREAM_ENCODE_DATADIR=/myscratchspace/dream_encode/
@@ -22,8 +24,8 @@ export DREAM_ENCODE_DATADIR=/myscratchspace/dream_encode/
 
 3. [optional] Calculate gene expression PCs using `gene_expression_pca.R`. I included the output file, 'ge_pca.txt' so you don't strictly need to rerun this. If you do want to do this yourself you'll need the R packages irlba and foreach.
 
-4. Calculate DNaseII cut counts using the 'get_DNase_cuts.py` script. This converts the DNaseII bams into an efficient numpy representation of cut counts saved in .npz files. The bam first need indexing (e.g. using samtools). `index.sh` will do this for you. 
+4. Calculate DNaseII cut counts using the `get_DNase_cuts.py` script. This converts the DNaseII bams into an efficient numpy representation of cut counts saved in .npz files. The bam first need indexing (e.g. using samtools). `index.sh` will do this for you. 
 
 5. Train models for each TF using `train.py`. This script includes outputting leaderboard and final submissions.
 
-6. Submit to Synapse using `submit.py`. 
+6. Submit to Synapse using `submit.py`. Note you'll need to set up a folder in Synapse to use for this and set the id in the script. 
