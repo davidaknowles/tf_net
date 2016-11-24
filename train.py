@@ -1,4 +1,4 @@
-from train_leaderboard_final import to_test, train_test # Specifies training, leaderboard and final cell types
+from train_leaderboard_final import to_test, train_test # Specifiegs training, leaderboard and final cell types
 import sys
 import numpy as np
 
@@ -59,7 +59,7 @@ n_hidden=20
 # What needs loading? Useful for running interactively.
 print("Loading genome")
 if not var_exists('dicgen'):
-    dicgen = utils.get_fasta_chroms(DATADIR + "hg19.genome.fa.gz")
+    dicgen = utils.get_fasta_chrom(DATADIR + "hg19.genome.fa.gz", [ "chr%i" % i for i range(1,23) ] )
     
 batch_size=1000
 
