@@ -3,6 +3,8 @@ import numpy as np
 import gzip
 import timeit
 
+import os
+
 DATADIR=os.environ["DREAM_ENCODE_DATADIR"]
 
 ps=pysam.AlignmentFile(DATADIR+"DNase/DNASE.A549.biorep1.techrep1.bam","rb")
