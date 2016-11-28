@@ -7,6 +7,8 @@ This is a pretty standard convolutional neural net on genomic sequence with the 
 * simultaneous analysis of the forward and reverse complement.
 * down-sampling of the negative set to speed up training (and accounting for by weighting the likelihood). 
 
+From the round 2 leaderboard you can see performance is highly competitive for some TFs (e.g. MAX https://www.synapse.org/#!Synapse:syn6131484/wiki/402503) and less so for others (e.g. REST https://www.synapse.org/#!Synapse:syn6131484/wiki/402505).
+
 ### Installation
 
 You'll need the following python packages: pysam, pyDNase, scikit-learn (for performance metrics), synapseclient (for downloading the data and submitting), numpy, scipy, theano. 
