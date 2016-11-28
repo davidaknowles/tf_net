@@ -44,7 +44,7 @@ def read_cuts(input_fn):
     return(data,where,total,max_val)
 
 def read_npz(cell_type):
-    d=np.load(DATADIR+cell_type+".npz")
+    d=np.load(DATADIR+"DNase/"+cell_type+".npz")
     data={}
     where={}
     total={}

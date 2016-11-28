@@ -74,5 +74,5 @@ for strand in data:
         d["where%s_%s" % (strand,chrom)]=where[strand][chrom]
     d["total%s" % strand]=total[strand]
 
-np.savez(DATADIR+cell_type+".npz", **d)
+np.savez(DATADIR+"DNase/"+cell_type+".npz", **d)
 
