@@ -61,11 +61,11 @@ def net(input_size, flat_P, n_channels, filter_widths, pool_sizes, n_hidden, lea
 
     params[ "offset" ]=theano.shared( np.array( 0.0, dtype=theano.config.floatX), name="offset" )
 
-    # p is N-vector (N is number of samples)
-    logit_p=T.dot( current_input, params["b"] ) + params[ "offset" ]
+    # net_output is an N-vector (N is number of samples)
+    net_output=T.dot( current_input, params["b"] ) + params[ "offset" ]
 
-    sml=T.nnet.sigmoid( - logit_p )
-    s1ml=T.nnet.sigmoid( 1.0 -logit_p )
+    sml=T.nnet.sigmoid( - net_output )
+    s1ml=T.nnet.sigmoid( 1.0 -net_output )
     p=T.stack( ( sml, s1ml - sml, 1.0 - s1ml ), axis=1) 
 
     neg_like=-( y * np.log(p + 1.0e-20) ).sum()
@@ -81,11 +81,11 @@ def net(input_size, flat_P, n_channels, filter_widths, pool_sizes, n_hidden, lea
     not_fixed_params=[ v for k,v in params.iteritems() if not k in fixed ]
     updates=utils.AdaMax( not_fixed_params, cost, alpha=learning_rate)
 
-    train=theano.function( [x,x_flat,y], [logit_p,neg_like], updates=updates  )
+    train=theano.function( [x,x_flat,y], [net_output,neg_like], updates=updates  )
 
-    test=theano.function( [x,x_flat,y], [logit_p,neg_like] )
+    test=theano.function( [x,x_flat,y], [net_output,neg_like] )
 
-    pred=theano.function( [x,x_flat], logit_p )
+    pred=theano.function( [x,x_flat], net_output )
     
     return train,test,pred,params
 
