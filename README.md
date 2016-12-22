@@ -11,6 +11,8 @@ From the round 2 leaderboard you can see performance is highly competitive for s
 
 The repo is intended to be fully self contained (save dependencies on synapseclient, pysam and pyDNase python packages), including programmatic download of challenge data, pre-processing, model fitting, prediction and submission.
 
+[METHODS.ipynb](METHODS.ipynb) goes through the math for the ordinal likelihood, negative set downsampling and forward/RC model. 
+
 ### Installation
 
 You'll need the following python packages: pysam, pyDNase, scikit-learn (for performance metrics), synapseclient (for downloading the data and submitting), numpy, scipy, theano. 
